@@ -180,7 +180,7 @@ export function useVitalsOrBiometricsConcepts(mode: VitalsAndBiometricsMode) {
   const { concepts } = useConfig<ConfigObject>();
 
   const conceptUuids = useMemo(() => {
-    const biometricsKeys = ['heightUuid', 'midUpperArmCircumferenceUuid', 'weightUuid'];
+    const biometricsKeys = ['heightUuid', 'midUpperArmCircumferenceUuid', 'weightUuid', 'targetWeightUuid'];
 
     if (!concepts) {
       return [];
@@ -260,6 +260,8 @@ export function useVitalsAndBiometrics(patientUuid: string, mode: VitalsAndBiome
           return 'height';
         case concepts.weightUuid:
           return 'weight';
+        case concepts.targetWeightUuid:
+          return 'targetWeight';
         case concepts.midUpperArmCircumferenceUuid:
           return 'muac';
         default:
@@ -276,6 +278,7 @@ export function useVitalsAndBiometrics(patientUuid: string, mode: VitalsAndBiome
       concepts.respiratoryRateUuid,
       concepts.temperatureUuid,
       concepts.weightUuid,
+      concepts.targetWeightUuid,
     ],
   );
 

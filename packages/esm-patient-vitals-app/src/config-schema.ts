@@ -30,6 +30,10 @@ export const configSchema = {
       _type: Type.ConceptUuid,
       _default: '5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
     },
+    targetWeightUuid: {
+      _type: Type.ConceptUuid,
+      _default: '0a947c3b-ac0a-42af-9299-674620dc7a6d',
+    },
     respiratoryRateUuid: {
       _type: Type.ConceptUuid,
       _default: '5242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
@@ -129,6 +133,7 @@ export interface ConfigObject {
     oxygenSaturationUuid: string;
     heightUuid: string;
     weightUuid: string;
+    targetWeightUuid: string;
     respiratoryRateUuid: string;
     generalPatientNoteUuid: string;
     midUpperArmCircumferenceUuid: string;

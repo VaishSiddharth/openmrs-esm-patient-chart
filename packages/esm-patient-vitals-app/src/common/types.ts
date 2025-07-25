@@ -98,6 +98,7 @@ export interface PatientVitalsAndBiometrics {
   spo2RenderInterpretation?: ObservationInterpretation;
   height?: number;
   weight?: number;
+  targetWeight?: number;
   bmi?: number | null;
   respiratoryRate?: number;
   respiratoryRateRenderInterpretation?: ObservationInterpretation;
